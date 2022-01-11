@@ -38,10 +38,7 @@ devices:
     data:
       filename: 'Beobachter.slx'
       params: 
-        A: [0, 1; 0, 0]
-        B: [0, 7.007]
-        C: [1, 0]
-        L: [40, 300]
+        L: [[40], [300]]
         K: [0.4281, 0.5708]
   - name: ZRM
     type: Model
@@ -82,8 +79,7 @@ devices:
     data:
       filename: 'ZRM.slx'
       params:
-       x0: 0.3
-        
+       x0: 0.3 
   - name: gpio
     type: MiniGenerator
     interface: ./mini_generator.yml
