@@ -1,3 +1,5 @@
+prelude:
+    'prelude.m'
 devices:
   - name: Beobachter
     type: Model
@@ -37,9 +39,7 @@ devices:
             - analog
     data:
       filename: 'Beobachter.slx'
-      params: 
-        L: [[40], [300]]
-        K: [0.4281, 0.5708]
+
   - name: ZRM
     type: Model
     interface:
@@ -102,3 +102,4 @@ connections:
   - [gpio, U(t), Beobachter, U(t)]
   - [ZRM, Y(t), Beobachter, Y(t)]
   - [Beobachter, Yhat, logger, Yhat]
+

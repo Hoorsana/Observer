@@ -15,6 +15,7 @@ _engine.import_matlab_engine("R2021b")
 def test_experiment():
     info = loader.load_test("test.yml")
     details = simulink.load_details("matlab_detail.yml")
+    prelude = details.prelude
     experiment = simulink.create(info, details)
     report = experiment.execute()
     if report.failed:
