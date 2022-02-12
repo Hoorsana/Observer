@@ -32,7 +32,11 @@ targets:
 logging:
   - target: Beobachter
     signal: Yhat
-    period: 0.1     
+    period: 0.01   
+  - target: Beobachter
+    signal: x_hat(t)*K
+    period: 0.01     
+      
     
 
 phases:

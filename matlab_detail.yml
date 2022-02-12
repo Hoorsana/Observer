@@ -95,6 +95,18 @@ devices:
           flags:
             - input
             - analog
+  - name: logger2
+    type: MiniLogger
+    interface:
+      ports:
+        - signal: x_hat(t)*K
+          channel: 1
+          range:
+            min: -1
+            max: 1
+          flags:
+            - input
+            - analog
 
 connections:
   - [gpio, U(t), ZRM, U(t)]
@@ -102,4 +114,6 @@ connections:
   - [gpio, U(t), Beobachter, U(t)]
   - [ZRM, Y(t), Beobachter, Y(t)]
   - [Beobachter, Yhat, logger, Yhat]
+  - [Beobachter, x_hat(t)*K, logger2, x_hat(t)*K]
+
 
